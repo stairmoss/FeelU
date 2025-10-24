@@ -200,21 +200,3 @@ Sensors & Motors Camera + AI Model
 
 ---
 
-## 🧭 Repository Structure
-feel-u/
-├── hardware/
-│ ├── schematics/
-│ ├── pcb/
-│ └── wiring_diagram.png
-├── firmware/
-│ ├── arduino_eeg/
-│ └── motor_control/
-├── raspberry/
-│ ├── eeg_reader.py
-│ ├── stress_ai_model.tflite
-│ └── mqtt_publisher.py
-├── app/
-│ └── flutter_source/
-├── docs/
-│ └── README.md ← you are here
-
