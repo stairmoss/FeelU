@@ -199,4 +199,108 @@ Sensors & Motors Camera + AI Model
 | **Total** | **≈ 16 000 – 18 000 INR** |
 
 ---
+🧩 4. Circuit Connections
 
+EEG Bioamp → Raspberry Pi 5 GPIO pins
+
+Analog output → ADC (ADS1115 module) → Pi SDA/SCL
+
+GND to Pi GND
+
+VCC to 3.3V
+
+Motors → L298N → Raspberry Pi
+
+Motor A IN1, IN2 → GPIO 17, 18
+
+Motor B IN3, IN4 → GPIO 22, 23
+
+12V battery to L298N +12V
+
+GND to Pi GND
+
+LED → GPIO 24
+
+RGB LEDs for stress color feedback.
+
+Speaker → USB or 3.5mm jack
+
+For voice responses.
+
+🔍 5. Working Flow
+
+EEG headset collects brainwave signals.
+
+Signals processed → Extract stress index (0–100%).
+
+Robot receives the data via Wi-Fi.
+
+If stress > threshold (e.g., 60%), robot:
+
+Moves toward you.
+
+Lights turn blue.
+
+Plays a calming voice/music.
+
+App logs “Stress Relief Started.”
+
+App dashboard shows live graph of EEG + emotion score.
+
+🧠 6. Features
+
+✅ Real-time EEG-based stress detection
+✅ AI-driven emotional classification
+✅ Voice-guided relaxation sessions
+✅ Mobile dashboard with graphs
+✅ Autonomous movement
+✅ Adaptive LED emotion colors
+✅ Cloud data sync for history tracking
+
+🧰 7. Tools for Building
+
+3D Modelling: Fusion 360 or TinkerCAD (for body design)
+
+Electronics Design: EasyEDA / KiCad (for PCB layout)
+
+App Building: Kodular / Flutter
+
+AI Model Training: Google Colab (Python Notebook)
+
+🚀 8. How to Build Step-by-Step
+
+3D Print or design the robot body using Fusion 360 → export .stl
+
+Assemble:
+
+Mount Raspberry Pi + motor driver + wheels.
+
+Connect EEG bioamp to Pi.
+
+Flash Raspberry Pi OS → setup Wi-Fi → enable SSH.
+
+Install Libraries:
+
+sudo apt update
+sudo apt install python3-pip
+pip install brainflow flask gpiozero tensorflow
+
+
+Run the robot control script.
+
+Connect mobile app (built with Kodular/Flutter) using Firebase.
+
+Test EEG signals → verify stress graph.
+
+Deploy AI model → robot reacts automatically.
+
+🧩 9. Blueprint Submission (Hack Club)
+
+In blueprint.hackclub.com, upload:
+
+File Type	Description
+.stl / .obj	Robot body 3D model
+.py	Robot control & EEG reading code
+.f3d / .step	CAD design (optional)
+.md	README (this document)
+Images/Videos	Robot photos & working demo
